@@ -31,8 +31,8 @@
 
 ## Блок‑схемы
 
-* [x] Алгоритм поиска компонент связности — `diagrams/connected_components_flowchart.png`
-* [x] Алгоритм Heap Sort — `diagrams/heapsort_flowchart.png`
+* Алгоритм поиска компонент связности — `diagrams/connected_components_flowchart.png`
+* Алгоритм Heap Sort — `diagrams/heapsort_flowchart.png`
 
 ## Результаты
 <img src="blob:chrome-untrusted://media-app/b6811724-a393-4688-8fe2-525243193107" alt="Screenshot 2026-05-10 16.43.42.png"/>
