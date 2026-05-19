@@ -31,11 +31,11 @@
 
 ## Блок‑схемы
 
-* Алгоритм поиска компонент связности — `diagrams/connected_components_flowchart.png`
+* Алгоритм поиска компонент связности — `diagrams/dfs_flowchart.png`
 * Алгоритм Heap Sort — `diagrams/heapsort_flowchart.png`
 
 ## Результаты
 <img src="blob:chrome-untrusted://media-app/b6811724-a393-4688-8fe2-525243193107" alt="Screenshot 2026-05-10 16.43.42.png"/>
 <img src="blob:chrome-untrusted://media-app/11417319-e2c0-4690-90b2-cd6c6f914e6a" alt="Screenshot 2026-05-10 16.44.01.png"/>
-**Вывод программы:**
+
 
