@@ -1,32 +1,59 @@
-def create_adjacency_matrix(edges, num_vertices):
-    matrix = [[0] * num_vertices for _ in range(num_vertices)]
+ #ГРАФЫ
+
+ def create_adjacency_matrix(edges, num_vertices):
+    matrix = []
+    for i in range(num_vertices):
+        row = []
+        for j in range(num_vertices):
+            row.append(0)
+        matrix.append(row)
+  
     for u, v in edges:
-        matrix[u-1][v-1] = matrix[v-1][u-1] = 1
+        matrix[u-1][v-1] = 1
+        matrix[v-1][u-1] = 1
+    
     return matrix
 
 def create_incidence_matrix(edges, num_vertices):
     num_edges = len(edges)
-    matrix = [[0] * num_edges for _ in range(num_vertices)]
-    for i, (u, v) in enumerate(edges):
-        matrix[u-1][i] = matrix[v-1][i] = 1
+    
+    matrix = []
+    for i in range(num_vertices):
+        row = []
+        for j in range(num_edges):
+            row.append(0)
+        matrix.append(row)
+    
+    for edge_idx, (u, v) in enumerate(edges):
+        matrix[u-1][edge_idx] = 1
+        matrix[v-1][edge_idx] = 1
+    
     return matrix
 
 def find_connected_components(edges, num_vertices):
-    from collections import defaultdict
-    graph = defaultdict(list)
+    graph = {}
+    for i in range(1, num_vertices + 1):
+        graph[i] = []
+    
     for u, v in edges:
         graph[u].append(v)
         graph[v].append(u)
-    visited, components = set(), []
-    def dfs(v, comp):
-        visited.add(v)
-        comp.append(v)
-        for neighbor in graph[v]:
+    
+    visited = []
+    components = []
+    
+    def dfs(vertex, component):
+        visited.append(vertex)
+        component.append(vertex)
+        
+        for neighbor in graph[vertex]:
             if neighbor not in visited:
-                dfs(neighbor, comp)
-    for v in range(1, num_vertices + 1):
-        if v not in visited:
-            comp = []
-            dfs(v, comp)
-            components.append(sorted(comp))
+                dfs(neighbor, component)
+    
+    for vertex in range(1, num_vertices + 1):
+        if vertex not in visited:
+            component = []
+            dfs(vertex, component)
+            components.append(component)
+    
     return components
