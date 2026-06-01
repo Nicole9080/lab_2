@@ -16,7 +16,7 @@
 
 ## Блок‑схемы
 
-* Алгоритм поиска компонент связности — `diagrams/dfs_flowchart.png`
+* Алгоритм поиска компонент связности — `[diagrams/dfs_flowchart.png](https://github.com/Nicole9080/lab_2/blob/main/diagrams/capture_20260601180202612.bmp)`
 * Алгоритм Heap Sort — `diagrams/heapsort_flowchart.png`
 
 ## Результаты
