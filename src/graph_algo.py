@@ -57,3 +57,20 @@ def find_connected_components(edges, num_vertices):
             components.append(component)
     
     return components
+
+#задание
+ num_vertices = 7
+edges = [(1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (6, 7), (1, 7)]
+
+print("МАТРИЦА СМЕЖНОСТИ:")
+adj_matrix = create_adjacency_matrix(edges, num_vertices)
+for row in adj_matrix:
+    print(row)
+
+print("\nМАТРИЦА ИНЦИДЕНТНОСТИ:")
+inc_matrix = create_incidence_matrix(edges, num_vertices)
+for row in inc_matrix:
+    print(row)
+
+components = find_connected_components(edges, num_vertices)
+print("\nКОМПОНЕНТЫ СВЯЗНОСТИ:", components)
